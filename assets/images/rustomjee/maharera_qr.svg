@@ -1,0 +1,7 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="150" height="150" fill="#ffffff" stroke="#100906" stroke-width="2" />
+  <rect x="20" y="20" width="110" height="110" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="5,5" />
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="14" font-weight="bold" fill="#100906">MahaRERA QR</text>
+  <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="11" fill="#333">PR1170002501979</text>
+  <text x="50%" y="115%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="10" fill="#999">Official QR Image Required</text>
+</svg>

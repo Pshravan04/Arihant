@@ -1,0 +1,3806 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16732782326"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'AW-16732782326'); </script>    <!-- Meta Pixel Code -->
+
+
+    <title> Arihant The X</title>
+      <link rel="icon" type="image/x-icon" href="uploads/images/downloadfabi.png" class="gallery-item">
+    <!-- Add this in the <head> section of your HTML or before the script tag that uses jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        function logVisitorData() {
+            // Get the necessary information
+            var ip = ""; // IP address will be fetched from the server
+            var userAgent = navigator.userAgent; // User agent string
+            var referrer = document.referrer; // Referrer (where the visitor came from)
+            var screenWidth = window.screen.width; // Screen width
+            var screenHeight = window.screen.height; // Screen height
+            var deviceType = (navigator.userAgent.match(/Mobi/i)) ? 'Mobile' : 'Desktop'; // Device type (Mobile/Desktop)
+            var browser = navigator.userAgent.match(/(Chrome|Firefox|Safari|Edge)/) ? RegExp.$1 : 'Unknown'; // Browser
+            var os = navigator.platform; // Operating system
+            var language = navigator.language || navigator.userLanguage; // Browser language
+
+            // Prepare the data to send to the server
+            var visitorData = {
+                ip: ip,
+                time: (new Date()).toLocaleString(), // Current time in ISO format
+                date: new Date().toLocaleDateString(), // Current date in locale 
+                userAgent: userAgent,
+                referrer: referrer,
+                screenWidth: screenWidth,
+                screenHeight: screenHeight,
+                deviceType: deviceType,
+                browser: browser,
+                os: os,
+                language: language
+            };
+
+            // Send the data to the backend (log_visitor.php) using AJAX
+            $.ajax({
+                url: 'log_visitor.php', // The PHP script that handles logging
+                method: 'POST',
+                data: JSON.stringify(visitorData),
+                contentType: 'application/json',
+                success: function (response) {
+
+                },
+                error: function (error) {
+
+                }
+            });
+        }
+
+        // Call the logVisitorData function when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            logVisitorData();
+        });
+    </script>
+    <!--<script>-->
+    <!--    fetch('log.php')-->
+    <!--        .catch(err => {-->
+    <!--            window.location.href = "http://www.w3schools.com";-->
+    <!--        });-->
+    <!--</script>-->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <!-- Font Awesome (latest version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+
+    <!-- Lucide Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <style>
+        body {
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+
+        .heading,
+        h2 {
+            font-size: 50px !important;
+            color:
+                #ca9102                !important;
+            font-weight: 500 !important;
+            /* font-family: 'Lora', serif !important; */
+            text-transform: uppercase !important;
+
+            margin: 10px !important;
+            /* font-family: Montserrat            !important;
+            */ padding-top: 30px;
+
+
+
+
+        }
+
+        .react-cover-price,
+        .react-cover-heading {
+            color:
+                #ca9102                !important;
+        }
+
+        .cover_subheading_4 {
+            line-height: 1.2;
+        }
+
+        .call,
+        .whatsapp,
+        .enquiry {
+
+            background-color:
+                #ca9102                !important;
+
+        }
+
+        .animated-div {
+            background: linear-gradient(-45deg, #ca9102, rgb(141, 102, 1), #ca9102);            background-size: 350%;
+            animation: animateBackground 2s linear infinite;
+            cursor: pointer;
+            position: relative;
+            padding: 1px;
+
+        }
+
+        .animated-btn {
+            height: 50px;
+            width: 160px;
+            font-size: 18px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(-45deg, #ca9102, rgb(141, 102, 1), #ca9102);            background-size: 200%;
+            animation: animateBackground 2s linear infinite;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            background-color: white;
+            margin: auto;
+            /* animation: shake 1.5s ease-in-out infinite; */
+            color:
+                #ca9102            ;
+            border: 1px solid
+                #ca9102            ;
+            font-weight: 400;
+            box-shadow: 2px 2px 8px
+                #ca9102            ;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        .cover-btn {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            background-color:
+                #ca9102            ;
+            margin: auto;
+            color: white;
+            border: 1px solid
+                #ca9102            ;
+            font-weight: 400;
+            box-shadow: 1px 1px 4px
+                #ca9102            ;
+            padding-right: 30px;
+            padding-left: 30px;
+            margin-left: 10px;
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .cover-btn {
+                width: 100%;
+            }
+        }
+
+        .ring-btn {
+            height: 50px;
+            width: 160px;
+            font-size: 15px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+
+            background-color:
+                #ca9102            ;
+
+            cursor: pointer;
+
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        .overlaptxt {
+            background-color:
+                #ca9102                !important;
+            color: white !important;
+        }
+
+        .btn:hover {
+            color: white !important;
+            background-color:
+                #ca9102            ;
+            scale: 1.05;
+
+
+        }
+
+
+
+        .cover_heading {
+            /* color: #ca9102            !important;
+            */ color: black !important;
+            /* font-family: Lora            !important;
+            */ line-height: normal;
+            padding-top: 30px !important;
+
+        }
+
+
+        .amenity_icon {
+
+            background-color:
+                #ca9102            ;
+
+        }
+
+        .Highlights li p i {
+
+            color:
+                #201d1d            ;
+
+
+
+        }
+
+        .amenity-item i {
+            color:
+                #ffffff            ;
+
+        }
+
+        .location_list li i {
+
+            color:
+                #8c5a1e            ;
+
+
+        }
+
+        .scroll-btn {
+
+            background-color:
+                #ca9102            ;
+
+        }
+
+
+
+        .location_list li {
+
+            background-color:
+                #ca9102            ;
+
+
+        }
+
+        @media (max-width: 1200px) {
+
+            .heading,
+            h2 {
+                font-size: 45px !important;
+                /* Adjusts for medium screens like tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .heading,
+            h2 {
+                font-size: 40px !important;
+                /* Adjusts for small screens like mobile */
+            }
+        }
+
+        .mobile_full {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+
+            .heading,
+            h2 {
+                font-size: 38px !important;
+                /* Further adjustment for very small screens */
+            }
+
+            .desktop_full {
+                display: none;
+            }
+
+            .mobile_full {
+                display: inline;
+            }
+
+            #scrollbar1::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            #scrollbar1::-webkit-scrollbar-track {
+                border-radius: 8px;
+                background-color: #e7e7e7;
+                border: 1px solid #cacaca;
+            }
+
+            #scrollbar1::-webkit-scrollbar-thumb {
+                border-radius: 8px;
+                background-color: #d55959;
+            }
+        }
+
+        .subheading,
+        p {
+            font-size: 18px !important;
+            /* color: black !important; */
+            font-weight: 400 !important;
+            /* font-family: Palatino            !important;
+            */ margin: 13px !important;
+            margin-top: 10px !important;
+
+
+
+        }
+
+        @media (max-width: 1700px) {
+
+            .subheading,
+            p {
+                font-size: 18px !important;
+                /* Adjusts for medium screens like tablets */
+            }
+        }
+
+        @media (max-width: 1200px) {
+
+            .subheading,
+            p {
+                font-size: 18px !important;
+                /* Adjusts for medium screens like tablets */
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .subheading,
+            p {
+                font-size: 16px !important;
+                /* Adjusts for small screens like mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .subheading,
+            p {
+                font-size: 16px !important;
+                /* Further adjustment for very small screens */
+            }
+        }
+
+
+        .divider {
+            margin: auto !important;
+            padding: 0px !important;
+            height: 3px !important;
+            width: 14% !important;
+            margin-bottom: 25px !important;
+            margin-top: 0px !important;
+            min-width: 90px !important;
+            max-width: 120px !important;
+
+            background-color:
+                #ca9102                !important;
+            color:
+                #ca9102                !important;
+
+        }
+
+        .inputbox {
+            border: 1px solid
+                #ca9102            ;
+        }
+
+        .inputbox i {
+            color:
+                #ca9102                !important;
+        }
+
+        .formbhtop {
+
+            background-color:
+                #ca9102            ;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif !important;
+        }
+
+        /* Paragraphs, divs, spans, list items, etc. use Playfair Display font */
+        p,
+        div,
+        span,
+        li {
+            font-family: 'Montserrat', sans-serif !important;
+        }
+
+        .navbar {
+            background-color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: white;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <div class="gallery"><img loading="lazy" src="uploads/images/output-onlinepngtools (10).png" alt="Image" class="gallery-item" style="max-width:100px; "></div></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#plans">Plans & Pricing</a>
+                    <a class="nav-link" href="#amenities">Amenities</a>
+                    <a class="nav-link" href="#location">Location</a>
+                    <a class="nav-link" href="#highlights">Highlights</a>
+                    <a class="nav-link" href="#interior">Interior View</a>
+                    <!--<a class="nav-link" href="#gallery">Mix Gallery</a>-->
+                    <a class="nav-link" href="#about">About Us</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+    </script>
+
+    <!-- react-cover -->
+
+    <div class="react-cover-main-container">
+
+
+
+
+        <section class="relative h-screen min-h-[700px] flex items-center react-cover">
+            <!-- Background Slider -->
+            <div id="slider-background" class="absolute inset-0 w-full h-full overflow-hidden">
+                <!-- Slides will be inserted here -->
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 w-full h-full  flex pd-10 cover-content openPopFormBtn">
+                <div class="luxury-container grid md:grid-cols-12 gap-10 items-center bg-trans">
+                    <div class="md:col-span-7 lg:col-span-7 text-white">
+                        <div class="max-w-3xl" id="slider-content">
+                            <!-- Slide content goes here -->
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 animate-fade-in">
+
+                            <button class="cover-btn">Download Brochure</button>
+
+                        </div>
+                        <div class="flex items-center gap-4 mt-10">
+                            <div class="flex space-x-3" id="dots-container">
+                                <!-- Dots will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-5 lg:col-span-5" id="contact-form" style="display: none"></div>
+                </div>
+            </div>
+        </section>
+
+        <script src="slides.js.php"></script>
+        <script>
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            const backgroundEl = document.getElementById("slider-background");
+            const contentEl = document.getElementById("slider-content");
+            const dotsEl = document.getElementById("dots-container");
+
+            function renderSlides() {
+                backgroundEl.innerHTML = "";
+                contentEl.innerHTML = "";
+                dotsEl.innerHTML = "";
+
+                slides.forEach((slide, index) => {
+                    // Background slide
+                    const bgDiv = document.createElement("div");
+                    bgDiv.className = `absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${currentSlide === index ? "opacity-100" : "opacity-0"
+                        }`;
+                    bgDiv.innerHTML = `
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center transform scale-[1.03]" style="background-image: url('${slide.image}');   background-position: center;"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/100 to-black/30"></div>
+      `;
+                    backgroundEl.appendChild(bgDiv);
+
+                    // Foreground content
+                    const fgDiv = document.createElement("div");
+                    fgDiv.className = `transition-opacity duration-1000 ${currentSlide === index ? "opacity-100" : "opacity-0 absolute"
+                        }`;
+                    fgDiv.innerHTML = `
+        <p class="text-sm md:text-md lg:text-xl font-Aerial font-medium mb-4 text-amber-400 primary-color"></p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-Aerial font-medium mb-4   react-cover-heading">
+          ${slide.title}
+          <div class="flex items-center "><i class="lucide lucide-map-pin"></i><span class="ml-1 text-xl"></span></div>
+        </h1>
+        <p class="text-md md:text-xl lg:text-2xl font-Aerial font-medium mb-4 text-amber-400  primary-color"></p>
+        <p class="text-xl md:text-2xl text-white/80 mb- sub-title ">${slide.subtitle}</p>
+        <p class="text-lg md:text-xl  mb-8 react-cover-price">${slide.price}</p>
+      `;
+                    contentEl.appendChild(fgDiv);
+
+                    // Dot
+                    const dot = document.createElement("button");
+                    dot.className = `w-2.5 h-2.5 rounded-full transition-all ${currentSlide === index
+                        ? "bg-gold w-8"
+                        : "bg-white/50 hover:bg-white/80"
+                        }`;
+                    dot.onclick = () => {
+                        currentSlide = index;
+                        renderSlides();
+                    };
+                    dotsEl.appendChild(dot);
+                });
+            }
+
+            // Auto slide
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                renderSlides();
+            }, 6000);
+
+            renderSlides();
+        </script>
+    </div>
+
+    <!-- cover -->
+
+    <div class="coverMainBox hide"
+        style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+
+
+
+        <section id="home"></section>
+
+        <div class="cover" id="home">
+            <div class="cover_heading "
+                style="
+            text-align: center;
+            color: #43423d;
+            font-size: 36px;
+            margin: 5px 5px 0px 5px;
+            padding: 5px 5px 0px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                Arihant The X            </div>
+            <div class="cover_subheading_2 overlaptxt zoom-box"
+                style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 0px 0px 0px 0px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                CC Received Till 50th Floor            </div>
+            <div class="coverimg">
+                <div class="carousel" id="carousel-12"><div class="carousel-item"><img  src="uploads/images/7 (1).jpg" alt="Image" style="border-radius: 0px;"></div><div class="carousel-item"><img  src="uploads/images/6 (2).jpg" alt="Image" style="border-radius: 0px;"></div><div class="carousel-item"><img  src="uploads/images/5 (2).jpg" alt="Image" style="border-radius: 0px;"></div><div class="carousel-item"><img  src="uploads/images/4 (3).jpg" alt="Image" style="border-radius: 0px;"></div><div class="carousel-item"><img  src="uploads/images/3 (2).jpg" alt="Image" style="border-radius: 0px;"></div><div class="carousel-item"><img  src="uploads/images/The-Palette-Gallery1-min.jpg" alt="Image" style="border-radius: 0px;"></div><button class="carousel-prev"><i class="fa-solid fa-angle-left"></i></button><button class="carousel-next"><i class="fa-solid fa-angle-right"></i></button></div>
+            </div>
+
+
+            <!-- Animated Div Example 2 -->
+
+
+
+            <div class=" animated-div">
+
+                <div class="cover_subheading_3 "
+                    style="
+            text-align: center;
+            color: #ffffff;
+            font-size: 25px;
+            margin: 15px 10px 15px 10px;
+            padding: 15px 15px 15px 15px;
+            background-color: #ecba32;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                    Jodi Option Available<br />
+Near Siddhivinayak Temple<br />
+Infinity Pool With Sea &amp; City Views<br />
+Project Near Completion
+
+
+                </div>
+            </div>
+
+            <div class="cover_subheading_4"
+                style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 0px 5px 0px;
+            padding: 5px 0px 5px 0px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                Spacious 3, 4 &amp; 5 Bed Residences In South Mumbai<br />
+Starting from Rs 6.5 Cr++ 
+
+            </div>
+            <button class="ring-btn openPopFormBtn">Download Brochure</button>
+
+        </div>
+
+
+        <!-- desktopcover -->
+        <section id="home"></section>
+        <div class="desktopcover" id="home">
+            <div class="desktopcover_left">
+                <div class="coverimg">
+                    <div class="carousel" id="carousel-12"><div class="carousel-item"><img  src="uploads/images/7 (1).jpg" alt="Image"></div><div class="carousel-item"><img  src="uploads/images/6 (2).jpg" alt="Image"></div><div class="carousel-item"><img  src="uploads/images/5 (2).jpg" alt="Image"></div><div class="carousel-item"><img  src="uploads/images/4 (3).jpg" alt="Image"></div><div class="carousel-item"><img  src="uploads/images/3 (2).jpg" alt="Image"></div><div class="carousel-item"><img  src="uploads/images/The-Palette-Gallery1-min.jpg" alt="Image"></div><button class="carousel-prev"><i class="fa-solid fa-angle-left"></i></button><button class="carousel-next"><i class="fa-solid fa-angle-right"></i></button></div>
+                </div>
+
+            </div>
+            <div class="desktopcover_right">
+                <div class="cover_heading "
+                    style="
+            text-align: center;
+            color: #43423d;
+            font-size: 36px;
+            margin: 5px 5px 0px 5px;
+            padding: 5px 5px 0px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                    Arihant The X
+
+                </div>
+                <div class="cover_subheading_1"
+                    style="
+            text-align: center;
+            color: #000000;
+            font-size: 20px;
+            margin: 0px 5px 10px 5px;
+            padding: 0px 5px 10px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                    📍 Dadar (E)<br />
+
+
+                </div>
+                <div class="cover_subheading_2 overlaptxt zoom-box"
+                    style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 0px 0px 0px 0px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                    CC Received Till 50th Floor
+
+                </div>
+
+                <!-- Animated Div Example 2 -->
+
+
+
+                <div class=" animated-div">
+
+                    <div class="cover_subheading_3 "
+                        style="
+            text-align: center;
+            color: #ffffff;
+            font-size: 25px;
+            margin: 15px 10px 15px 10px;
+            padding: 15px 15px 15px 15px;
+            background-color: #ecba32;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                        Jodi Option Available<br />
+Near Siddhivinayak Temple<br />
+Infinity Pool With Sea &amp; City Views<br />
+Project Near Completion
+
+
+                    </div>
+                </div>
+
+                <div class="cover_subheading_4"
+                    style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 0px 5px 0px;
+            padding: 5px 0px 5px 0px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                    Spacious 3, 4 &amp; 5 Bed Residences In South Mumbai<br />
+Starting from Rs 6.5 Cr++ 
+
+                </div>
+                <button class="enquirybtn animated-btn openPopFormBtn">Download Brochure</button>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="full_img">
+        <div class="desktop_full">
+
+            <div class="full_size_img_desktop hide"
+                style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #ffffff;
+            background-image: url('''');
+  ">
+
+
+                <div class="gallery"><img loading="lazy" src="uploads/images/WhatsApp-Image-2023-05-11-at-8.58.41-AM-1-1536x864-pc.png" alt="Image" class="gallery-item"><img loading="lazy" src="uploads/images/Untitled-design-74-ocean.png" alt="Image" class="gallery-item"></div>            </div>
+
+        </div>
+        <div class="mobile_full">
+
+            <div class="full_size_img_desktop hide"
+                style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #ffffff;
+            background-image: url('''');
+  ">
+
+                <div class="gallery"><img loading="lazy" src="uploads/images/WhatsApp Image 2024-12-20 at 12.20.48_f570afc6.png" alt="Image" class="gallery-item"></div>
+            </div>
+
+        </div>
+    </div>
+        <section id="highlights">
+
+        <div class="" id="highlights">
+            <!-- highlight section -->
+            <div class="Highlights"
+                style="
+            text-align: center;
+            color: #dcc656;
+            font-size: 20px;
+            margin: 10px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 50% auto;
+        ">
+
+                <h2 class="heading"> Project At A Glance</h2>
+
+                <!-- divider -->
+                <div class="Highlights_heading_divider">
+                    <hr class="divider">
+
+
+                </div>
+
+
+                <div class="highlight_list"
+                    style="">
+                    <!--  <h2 class="heading" >highlight_list</h2> -->
+
+                    <!-- Fetch list items for this list -->
+                    
+                    <!-- Display list items -->
+
+                    <ul>
+                                                    <li>
+                                                                    <p>
+                                        <i class="fa-regular fa-chess-queen"></i>
+                                        <!-- <i class="fa-regular fa-star"></i> -->
+                                        G + 27 Floors                                    </p>
+                                                            </li>
+                                                    <li>
+                                                                    <p>
+                                        <i class="fa-regular fa-chess-queen"></i>
+                                        <!-- <i class="fa-regular fa-star"></i> -->
+                                        Signature Finishes                                    </p>
+                                                            </li>
+                                                    <li>
+                                                                    <p>
+                                        <i class="fa-regular fa-chess-queen"></i>
+                                        <!-- <i class="fa-regular fa-star"></i> -->
+                                        Ultra-Modern Lifestyle Amenities                                    </p>
+                                                            </li>
+                                                    <li>
+                                                                    <p>
+                                        <i class="fa-regular fa-chess-queen"></i>
+                                        <!-- <i class="fa-regular fa-star"></i> -->
+                                        4 Residences Per Floor                                    </p>
+                                                            </li>
+                                                    <li>
+                                                                    <p>
+                                        <i class="fa-regular fa-chess-queen"></i>
+                                        <!-- <i class="fa-regular fa-star"></i> -->
+                                        Well-Rounded Urban Lifestyle                                    </p>
+                                                            </li>
+                                                    <li>
+                                                                    <p>
+                                        <i class="fa-regular fa-chess-queen"></i>
+                                        <!-- <i class="fa-regular fa-star"></i> -->
+                                        Ultra Luxury Apartment                                    </p>
+                                                            </li>
+                                            </ul>
+
+                    <!-- Link to manage the list -->
+
+                </div>
+                <br>
+
+            </div>
+
+        </div>
+    </section>
+    <section>
+
+        <!-- Project Overview -->
+        <div class="Project_Overview"
+            style="
+            text-align: center;
+            color: #ffffff;
+            font-size: 33px;
+            margin: 0px 0px 0px 0px;
+            padding: 5px 0px 25px 5px;
+            background-color: #ffffff;
+            background-image: url('');
+   ">
+             
+
+            <div class="project_mainbox">
+                <div class="project_leftbox">
+
+                    <!-- Project_Overview_Headline -->
+
+                    <div class="Project_Overview_Headline"
+                        style="
+            text-align: left;
+            color: #ffffff;
+            font-size: 30px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #000000;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                        <h2 class="heading">
+
+                            Luxury Living in the Heart of Sewri                        </h2>
+                        <hr class="divider">
+
+                    </div>
+
+                    <!-- Project_Overview_Body_text -->
+                    <div class="Project_Overview_Body_text subheading"
+                        style="
+            text-align: left;
+            color: #000000;
+            font-size: 18px;
+            margin: 0px 5px 0px 5px;
+            padding: 0px 5px 0px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                        Arihant The X Asalpha appears to refer to the Arihant Realtors Sewri project, a premium residential development by the Arihant Realtors in South Mumbai, offering luxury apartments with sea views and modern amenities. The name &quot;Vista Bay&quot; emphasizes the development's promised bay or sea views. 
+
+
+                    </div>
+                    <!-- <button class="projectbtn btn">Click me</button> -->
+
+                </div>
+                <div class="project_rightbox">
+
+                    <div class="gallery"><img loading="lazy" src="uploads/images/ban1.webp" alt="Image" class="gallery-item"></div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+
+    <!-- Pricing_1  start-->
+    <section id="plans">
+        <div class="Pricing_1"
+            style="
+            text-align: center;
+            color: #c79c23;
+            font-size: 32px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url(uploads/vi">
+            <h2 class="heading">
+
+                Plans &amp; Pricing            </h2>
+            <hr class="divider">
+            <div class="Pricing_1_list"
+                style="">
+                <!--  <h2 class="heading" >Pricing_1_list</h2> -->
+
+                <!-- Fetch list items for this list -->
+                
+                <!-- Display list items -->
+
+                <ul>
+                    <li style="display:none;">
+                        <div class="openPopFormBtn btn"></div>
+                    </li>
+                                            <li>
+                                                            <div class="pricing_1_mainbox">
+                                    <div class="pricing_1_item">
+                                        <button style="border:none;" class="openPopFormBtn">
+                                            <img loading="lazy" src="uploads/images/5bhk.jpg" alt="Image" />
+
+                                        </button>
+                                        <hr>
+                                        <p>2 BHK<br />
+Carpet Area 750 Sq.Ft<br />
+Price Rs 3.49 Cr Onwards</p>
+                                        <button class="btn openPopFormBtn">Enquire Now</button>
+                                    </div>
+
+
+
+                                </div>
+                                                    </li>
+                                            <li>
+                                                            <div class="pricing_1_mainbox">
+                                    <div class="pricing_1_item">
+                                        <button style="border:none;" class="openPopFormBtn">
+                                            <img loading="lazy" src="uploads/images/5bhk.jpg" alt="Image" />
+
+                                        </button>
+                                        <hr>
+                                        <p>3 BHK<br />
+Carpet Area 1300 Sq.Ft<br />
+Price Rs 4.49 Cr Onwards</p>
+                                        <button class="btn openPopFormBtn">Enquire Now</button>
+                                    </div>
+
+
+
+                                </div>
+                                                    </li>
+                                    </ul>
+
+
+
+            </div>
+
+            <br>
+
+
+        </div>
+    </section>
+    <!-- Pricing_1  end-->
+
+
+    <!-- Pricing_2  start-->
+    <section id="plans">
+        <div class="price_2 hide"
+            style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('');
+    ">
+            <div class="table_pricing">
+                <h2 class="heading">Plans & Pricing</h2>
+                <hr class="divider">
+                <table>
+
+                    <tr></tr>
+                    <tr class="hideinmob">
+                        <th>Size</th>
+                        <th>Carpet Area</th>
+                        <th>Price</th>
+                        <th>Enquire Now</th>
+
+                    </tr>
+
+                    <tbody>
+                                                    <tr class="subheading">
+
+                                <td>3 BHK</td>
+                                <td>325 Sq.Ft</td>
+
+                                <td>4.21 CR++</td>
+                                <br>
+                                <td>
+                                    <a class="enquire-button btn openPopFormBtn">Enquire Now</a>
+                                </td>
+
+                            </tr>
+                                                    <tr class="subheading">
+
+                                <td>2BHK</td>
+                                <td>500-1000 Sq.Ft</td>
+
+                                <td>4.21-5.21 Cr++</td>
+                                <br>
+                                <td>
+                                    <a class="enquire-button btn openPopFormBtn">Enquire Now</a>
+                                </td>
+
+                            </tr>
+                                            </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </section>
+    <!-- amenities section -->
+
+    <section id="amenities">
+        <div class="amenities"
+            style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 0px 0px 0px 0px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ebf7ff;
+            background-image: url('');
+    ">
+             
+            <div class="amenities_box">
+                <div class="amenities_left">
+                    <div class="amenities_heading"
+                        style="
+            text-align: center;
+            color: #888943;
+            font-size: 25px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #ffffff;
+            background-image: url('''''''');">
+                        <h2 class="heading">
+
+                            Amenities
+                        </h2>
+                        <hr class="divider">
+                    </div>
+                    <div class="amenities_subheading"
+                        style="
+            text-align: center;
+            color: #000000;
+            font-size: 23px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                        <p>Experience an enriched lifestyle with Arihant The X thoughtfully curated amenities, such as a spacious gym and efficient power backup.</p>
+
+
+
+                    </div>
+                    <div class="amenity-list" id="amenity-list">
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-swimming-pool"></i></div>
+
+                                <p class="subheading">Swimming Pool</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-users"></i></div>
+
+                                <p class="subheading">Clubhouse</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-spa"></i></div>
+
+                                <p class="subheading">Spa</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-child"></i></div>
+
+                                <p class="subheading">Kid's Play Area</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-gamepad"></i></div>
+
+                                <p class="subheading">Indoor Games</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-fire-extinguisher"></i></div>
+
+                                <p class="subheading">Fire Sprinklers</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-dumbbell"></i></div>
+
+                                <p class="subheading">Gymnasium</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-person-running"></i></div>
+
+                                <p class="subheading">Yoga Zone</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-gamepad"></i></div>
+
+                                <p class="subheading">Indoor Games</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-shield-alt"></i></div>
+
+                                <p class="subheading">24/7 Security</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-running"></i></div>
+
+                                <p class="subheading">Jogging Track</p>
+                            </div>
+                                                    <div class="amenity-item" style="">
+
+                                <div class="amenity_icon"> <i class="fa-solid fa-couch"></i></div>
+
+                                <p class="subheading">Lounge Area</p>
+                            </div>
+                                            </div>
+                    <!-- Scroll Buttons -->
+                    <div class="scrollbtnbox">
+
+                        <button class="scroll-btn" id="scrollBtnLeft"><i class="fa-solid fa-angle-left"></i></button>
+                        <button class="scroll-btn" id="scrollBtnRight"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+
+
+                </div>
+
+                <script>
+                    const scrollBtnLeft = document.getElementById('scrollBtnLeft');
+                    const scrollBtnRight = document.getElementById('scrollBtnRight');
+                    const amenityList = document.getElementById('amenity-list');
+
+                    // Scroll buttons
+                    scrollBtnLeft.addEventListener('click', () => {
+                        amenityList.scrollBy({
+                            top: 100,
+                            left: 50,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    scrollBtnRight.addEventListener('click', () => {
+                        amenityList.scrollBy({
+                            top: 0,
+                            left: 100,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    // Infinite auto-scroll setup
+                    const scrollStep = 100; // small steps for smoother loop
+                    const scrollDelay = 2000; // interval in ms
+                    let autoScroll = setInterval(() => {
+                        // If at or near end, reset to beginning
+                        if (amenityList.scrollLeft + amenityList.clientWidth >= amenityList.scrollWidth - 1) {
+                            amenityList.scrollTo({ left: 0, behavior: 'auto' });
+                        } else {
+                            amenityList.scrollBy({ left: scrollStep, behavior: 'smooth' });
+                        }
+                    }, scrollDelay);
+
+                    // OPTIONAL: Pause auto-scroll on hover
+                    amenityList.addEventListener('mouseenter', () => clearInterval(autoScroll));
+                    amenityList.addEventListener('mouseleave', () => {
+                        autoScroll = setInterval(() => {
+                            if (amenityList.scrollLeft + amenityList.clientWidth >= amenityList.scrollWidth - 1) {
+                                amenityList.scrollTo({ left: 0, behavior: 'auto' });
+                            } else {
+                                amenityList.scrollBy({ left: scrollStep, behavior: 'smooth' });
+                            }
+                        }, scrollDelay);
+                    });
+                </script>
+                <div class="amenities_right">
+
+                    <div class="carousel" id="carousel-4"><div class="carousel-item"><img loading="lazy" src="uploads/images/am22.jpg" alt="Image" ></div><div class="carousel-item"><img loading="lazy" src="uploads/images/am1.jpg" alt="Image" ></div><div class="carousel-item"><img loading="lazy" src="uploads/images/am2.jpg" alt="Image" ></div><button class="carousel-prev"><i class="fa-solid fa-angle-left"></i></button><button class="carousel-next"><i class="fa-solid fa-angle-right"></i></button></div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="section-padding bg-ivory-light virtualTour">
+        <div class="section-content">
+            <div class="luxury-container px-6 py-12">
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- Virtual Tour Request -->
+                    <div class="luxury-card overflow-hidden group cursor-pointer" onclick="openForm('virtualTour')">
+                        <div class="relative">
+                            <img style="filter: blur(2px);" src="uploads/images/virtual.webp" alt="Virtual Tour"
+                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                <button class="btn  openPopFormBtn">Request Virtual Tour</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cost Sheet Download -->
+                    <div class="luxury-card overflow-hidden group cursor-pointer" onclick="openForm('costSheet')">
+                        <div class="relative">
+                            <img style="filter: blur(2px);" src="uploads/images/costing.jpg" alt="Cost Sheet"
+                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                <button class="btn openPopFormBtn">Download Cost Sheet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Forms -->
+                <div id="virtualTourForm"
+                    class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+
+
+
+                </div>
+            </div>
+    </section>
+    <!-- location  -->
+    <section id="location">
+        <div class="Location"
+            style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''');
+">
+             
+            <div class="location_box">
+                <div class="location_left">
+                    <div class="location_heading"
+                        style="
+            text-align: center;
+            color: #898843;
+            font-size: 18px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #000000;
+            background-image: url('''''');
+">
+                        <h2 class="heading">
+
+                            Location Highlights                        </h2>
+                        <hr class="divider">
+
+                    </div>
+                    <div class="location_subheading"
+                        style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #000000;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                        <p> Arihant The X Asalpha, offers a perfect blend of connectivity and serenity. Nestled in a vibrant neighborhood with easy access to key city destinations, it promises modern living with a touch of tranquility. Enjoy the best of both worlds – city convenience and peaceful surroundings.                            <br>
+                        </p>
+
+
+                    </div>
+
+                    <!-- Display location list items -->
+                    <div class="location_list"
+                        style="">
+                        <!--  <h2 class="heading" >location_list</h2> -->
+
+                        <!-- Fetch list items for this list -->
+                        
+
+                        <div>
+                            <ul id="scrollList" class="scroll-container">
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>Atal Setu (MTHL) - 3 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>Eastern Freeway - 5 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>Mumbai International Airport - 30 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>TATA Memorial Hospital – 7 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>Global Hospital – 5 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>AER Four Seasons – 15 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>The St. Regis – 15 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>ITC Grand Central – 10 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>JCBN International School – 5 min</p>
+                                                                            </li>
+                                                                    <li>
+                                                                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                            <p>Raheja College- 10 min</p>
+                                                                            </li>
+                                                            </ul>
+                            <!-- Scroll buttons -->
+                            <div class="scrollbtnbox">
+
+                                <button class="scroll-btn" id="scrollLeftBtn1"><i
+                                        class="fa-solid fa-angle-left"></i></button>
+                                <button class="scroll-btn" id="scrollRightBtn2"><i
+                                        class="fa-solid fa-angle-right"></i></button>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Link to manage the list -->
+
+                    </div>
+                </div>
+                <div class="location_right">
+                    <div class="gallery"><img loading="lazy" src="uploads/images/Screenshot (672).png" alt="Image" class="gallery-item"></div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Interior section -->
+    <section id="interior">
+        <div class="Interior hide"
+            style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 0px 0px 0px 0px;
+            padding: 5px 5px 5px 5px;
+            background-color: #d0e5f5;
+            background-image: url('');
+    ">
+
+            <br>
+
+            <div class="Interior">
+                <div class="Interior_left">
+                    <div class="Interior_heading"
+                        style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''''');">
+                        <h2> Interior Images </h2>
+                        <hr class="divider">
+
+
+
+                    </div>
+                    <div class="Interior_subheading"
+                        style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 0px 0px 0px 0px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''''');">
+                        <p>  </p>
+
+
+                    </div>
+                </div>
+                <div class="Interior_right"><div class="carousel" id="carousel-6"><div class="carousel-item"><img loading="lazy" src="uploads/images/entryway-design-with-handleless-shoe-cabinet-and-round-mirror.jpg" alt="Image" class="interior_img"></div><div class="carousel-item"><img loading="lazy" src="uploads/images/secr2.jpg" alt="Image" class="interior_img"></div><button class="carousel-prev"><i class="fa-solid fa-angle-left"></i></button><button class="carousel-next"><i class="fa-solid fa-angle-right"></i></button></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div style="background-color:#e0e0e0 !important; padding:30px ;padding-bottom:60px">
+        <h2 class="heading" style="  text-align: center;
+  background-color: transparent !important;">
+
+            Schedule a Site Visit </h2>
+        <form id="leadForm" class="space-y-4 primary-color-off">
+            <input type="hidden" name="landing_url" class="landing-url" />
+            <input type="text" name="menorwomen" class="hidden" autocomplete="off" tabindex="-1"
+                style="display:flex;position:relative;z-index:-10;max-height:0;overflow:hidden;" />
+
+            <div class="space-y-2">
+                <label for="name" class="block text-sm font-medium">Full Name*</label>
+                <input id="name" name="name" class="w-full border p-2 rounded" required placeholder="John Doe" />
+            </div>
+            <div class="space-y-2">
+                <label for="email" class="block text-sm font-medium">Email Address*</label>
+                <input id="email" name="email" type="email" class="w-full border p-2 rounded" required
+                    placeholder="your@email.com" />
+            </div>
+            <div class="space-y-2">
+                <label for="phone" class="block text-sm font-medium">Phone Number*</label>
+                <div class="flex">
+                    <span
+                        class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">+91</span>
+                    <input id="phone" name="phone" type="tel" required
+                        class="w-full border p-2 rounded-l-none rounded-r" placeholder="98765 43210" pattern="\d{10}"
+                        minlength="10" maxlength="10" />
+                </div>
+            </div>
+
+            <!-- Channel Partner/Broker Question -->
+            <div class="space-y-2">
+                <label class="block text-sm font-medium">Are you a channel partner / broker?</label>
+                <div class="flex space-x-4">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="channel_partner" value="No" class="form-radio" checked>
+                        <span class="ml-2">No</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="channel_partner" value="Yes" class="form-radio">
+                        <span class="ml-2">Yes</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full btn-primary">Submit</button>
+        </form>
+
+        <!-- OTP Form -->
+        <div id="otpForm"
+            class="hidden flex flex-col items-center space-y-4 primary-color-off max-w-[500px] mx-auto w-full p-2">
+            <div class="flex flex-col items-center space-y-2">
+                <label class="block text-sm font-medium text-center">Enter OTP</label>
+                <div class="flex justify-center space-x-2">
+                    <input type="number" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                        class="otp-input border p-2 w-12 text-center" />
+                    <input type="number" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                        class="otp-input border p-2 w-12 text-center" />
+                    <input type="number" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                        class="otp-input border p-2 w-12 text-center" />
+                    <input type="number" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                        class="otp-input border p-2 w-12 text-center" />
+                    <input type="number" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                        class="otp-input border p-2 w-12 text-center" />
+                    <input type="number" inputmode="numeric" pattern="[0-9]*" maxlength="1"
+                        class="otp-input border p-2 w-12 text-center" />
+                </div>
+            </div>
+            <div class="flex justify-center items-center space-x-4">
+                <span id="timer" class="font-mono tracking-widest">02:00</span>
+                <button id="resendOtp" class="btn-link text-blue-600" disabled>Resend OTP</button>
+            </div>
+            <button id="otpSubmitBtn" class="w-full btn-primary text-center">Verify OTP</button>
+            <div id="statusBox" class="message-box hidden text-center"></div>
+        </div>
+
+
+        <!-- Final Section after verification or expiration -->
+        <div id="finalSection" class="hidden text-center">
+            <p>Processing... Please wait.</p>
+        </div>
+
+        <!-- Popup Modal -->
+        <div id="modalOverlay" class="dialog-overlay" style="display:none; align-items:center; justify-content:center;">
+            <div class="dialog-content sm:max-w-[425px] bg-white p-6 relative">
+                <button id="closeModal" class="absolute top-2 right-2" aria-label="Close Modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h3 id="modalTitle" class="text-2xl font-serif font-medium mb-4 text-charcoal">Contact Us</h3>
+
+                <form id="popupLeadForm" class="space-y-4 p-4 primary-color-off">
+                    <input type="hidden" name="landing_url" class="landing-url" />
+                    <input type="text" name="menorwomen" class="hidden" autocomplete="off" tabindex="-1"
+                        style="display:flex;position:relative;z-index:-10;max-height:0;overflow:hidden;" />
+
+                    <div class="space-y-2">
+                        <label for="popup-name" class="block text-sm font-medium">Full Name*</label>
+                        <input id="popup-name" name="name" class="w-full border p-2 rounded" required
+                            placeholder="John Doe" />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="popup-email" class="block text-sm font-medium">Email Address*</label>
+                        <input id="popup-email" name="email" type="email" class="w-full border p-2 rounded" required
+                            placeholder="your@email.com" />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="popup-phone" class="block text-sm font-medium">Phone Number*</label>
+                        <div class="flex">
+                            <span
+                                class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md">+91</span>
+                            <input id="popup-phone" name="phone" type="tel" required
+                                class="w-full border p-2 rounded-l-none rounded-r" placeholder="98765 43210"
+                                pattern="\d{10}" minlength="10" maxlength="10" />
+                        </div>
+                    </div>
+
+                    <!-- Channel Partner/Broker Question in Popup -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium">Are you a channel partner / broker?</label>
+                        <div class="flex space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="channel_partner" value="No" class="form-radio" checked>
+                                <span class="ml-2">No</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="channel_partner" value="Yes" class="form-radio">
+                                <span class="ml-2">Yes</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full btn-primary">Submit</button>
+                </form>
+
+                <div id="popupOtpForm" class="hidden space-y-4">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium">Enter OTP</label>
+                        <div class="flex space-x-2">
+                            <input type="text" maxlength="1" class="otp-input border p-2 w-12 text-center" />
+                            <input type="text" maxlength="1" class="otp-input border p-2 w-12 text-center" />
+                            <input type="text" maxlength="1" class="otp-input border p-2 w-12 text-center" />
+                            <input type="text" maxlength="1" class="otp-input border p-2 w-12 text-center" />
+                            <input type="text" maxlength="1" class="otp-input border p-2 w-12 text-center" />
+                            <input type="text" maxlength="1" class="otp-input border p-2 w-12 text-center" />
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span id="popupTimer" class="font-mono tracking-widest">02:00</span>
+                        <button id="popupResendOtp" class="btn-link text-blue-600" disabled>Resend OTP</button>
+                    </div>
+                    <button id="popupOtpSubmitBtn" class="w-full btn-primary">Verify OTP</button>
+                    <div id="popupStatusBox" class="message-box hidden text-center"></div>
+                </div>
+
+                <div id="popupFinalSection" class="hidden text-center">
+                    <p>Processing... Please wait.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="toast" class="toast"></div>
+
+    </div>
+    <!-- View section -->
+    <div class="View hide"
+        style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+
+
+        <div class="View_box">
+            <div class="View_left">
+                <div class="View_heading"
+                    style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''''');">
+                    <h2>View</h2>
+                    <hr class="divider">
+
+                </div>
+                <div class="View_subheading"
+                    style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                    <p>  </p>
+
+
+                </div>
+            </div>
+            <div class="View_right">
+                <div class="carousel" id="carousel-7"><div class="carousel-item"><img loading="lazy" src="uploads/images/mathuresh_monopoli-dadar_east-mumbai-mathuresh_infrapro_private_ltd.avif" alt="Image" style="min-height: 600px;"></div><button class="carousel-prev"><i class="fa-solid fa-angle-left"></i></button><button class="carousel-next"><i class="fa-solid fa-angle-right"></i></button></div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <style>
+        .mix_gallery {
+            display: none;
+        }
+
+        .mix_active {
+            display: block;
+        }
+    </style>
+    <div class="Mix_Gallery hide"
+        style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #cce9ff;
+            background-image: url(''''''''''">
+        <h2> Mix Gallery</h2>
+
+
+        <hr class="divider">
+
+
+        <div class="btnbox">
+            <button class="gallerybtn subheading btn" onclick="showSection('gallery1')">Exterior
+
+            </button>
+            <button class="gallerybtn subheading btn" onclick="showSection('gallery2')">Interior
+
+            </button>
+            <button class="gallerybtn subheading btn" onclick="showSection('gallery3')">Floors
+
+            </button>
+        </div>
+        <section id="gallery"></section>
+        <div id="gallery1" class="mix_gallery mix_active">
+
+            <div class="Exterior"
+                style="">
+
+
+                <div class="exterior_box">
+                    <div class="exterior_left">
+                        <div class="Exterior_heading"
+                            style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''');
+">
+                            <h2>  Exterior</h2>
+
+
+
+                        </div>
+                        <div class="Exterior_subheading"
+                            style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''');
+">
+                            <p class="subheading">  </p>
+
+
+                        </div>
+                    </div>
+                    <div class="exterior_right">
+                        <div class="carousel" id="carousel-8"><div class="carousel-item"><img loading="lazy" src="uploads/images/exterior-of-the-building-11.jpg" alt="Image" style="min-height: 600px;"></div><div class="carousel-item"><img loading="lazy" src="uploads/images/exterior-commercial-building1.jpg" alt="Image" style="min-height: 600px;"></div><button class="carousel-prev"><i class="fa-solid fa-angle-left"></i></button><button class="carousel-next"><i class="fa-solid fa-angle-right"></i></button></div>                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="gallery2" class="mix_gallery">
+
+            <div class="Interior">
+                <div class="Interior_left">
+                    <div class="Interior_heading"
+                        style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''''');">
+                        <h2 class="heading"> Interior Images</h2>
+
+
+                    </div>
+                    <div class="Interior_subheading"
+                        style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 0px 0px 0px 0px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''''');">
+                        <p>  </p>
+
+
+                    </div>
+                </div>
+                <div class="Interior_right">
+                    <div class="carousel" id="carousel-9"><div class="carousel-item"><img loading="lazy" src="uploads/images/entryway-design-with-handleless-shoe-cabinet-and-round-mirror.jpg" alt="Image" style="min-height: 600px;"></div><div class="carousel-item"><img loading="lazy" src="uploads/images/secr1.jpg" alt="Image" style="min-height: 600px;"></div><button class="carousel-prev"><i class="fa-solid fa-angle-left"></i></button><button class="carousel-next"><i class="fa-solid fa-angle-right"></i></button></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery3" class="mix_gallery">
+
+            <div class="floor_plan"
+                style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''''');
+">
+                <h2 class="heading"> Floor Plan</h2>
+
+            </div>
+            <div class="floor_img">
+                <div class="carousel" id="carousel-10"><div class="carousel-item"><img loading="lazy" src="uploads/images/plan21-0027-mainfloor.webp" alt="Image" style="min-height: 600px;"></div><div class="carousel-item"><img loading="lazy" src="uploads/images/What-is-a-floor-plan-with-dimensions.png" alt="Image" style="min-height: 600px;"></div><button class="carousel-prev"><i class="fa-solid fa-angle-left"></i></button><button class="carousel-next"><i class="fa-solid fa-angle-right"></i></button></div>            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all galleries
+            let galleries = document.querySelectorAll('.mix_gallery');
+            galleries.forEach(function (gallery) {
+                gallery.classList.remove('mix_active');
+            });
+
+            // Show the selected gallery
+            let selectedGallery = document.getElementById(sectionId);
+            selectedGallery.classList.add('mix_active');
+        }
+    </script>
+    <!-- devloper section -->
+    <section id="about"></section>
+    <div class="Developer"
+        style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url('''');
+  ">
+
+        <h2> About us</h2>
+        <hr class="divider">
+
+        <div class="devloper_box">
+            <div class="devloper_left">
+                <div class="gallery"><img loading="lazy" src="uploads/images/output-onlinepngtools (10).png" alt="Image" class="gallery-item"></div>
+            </div>
+            <div class="devloper_right">
+                <div class="Developer_heading"
+                    style="
+            text-align: center;
+            color: #000000;
+            font-size: 25px;
+            margin: 5px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: #ffffff;
+            background-image: url('''');
+  ">
+
+
+
+
+
+                </div>
+                <div class="Developer_subheading"
+                    style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 5px 15px 5px 15px;
+            padding: 5px 20px 5px 20px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+                    <p> Arihant Realtors is one of Mumbai’s most reputed real estate brands, known for crafting landmark luxury, residential, and township projects since 1996. With a portfolio spanning over 20 million sq ft., they are celebrated for design innovation, quality construction, and timely delivery. From premium high-rises in South and Western Mumbai to expansive lifestyle townships, Arihant Realtors has built a legacy of trust, exclusivity, and modern living</p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+            <div class="section">
+
+
+
+
+            <style>
+                /* Container for the carousel */
+                .carousel {
+                    position: relative;
+                    overflow: hidden;
+                    /* Hide items off-screen */
+                    width: 100%;
+                    /* Ensure it takes the full width of its parent container */
+                    height: 700px;
+
+                    /* Set a fixed height for the carousel */
+
+                    /* Background for visibility */
+                }
+
+                /* Style for each carousel item */
+                .carousel-item {
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    /* Initially place items off-screen to the right */
+                    width: 100%;
+                    /* Full width of the container */
+                    height: 100%;
+                    /* Full height of the container */
+                    transition: left 0.5s ease-in-out;
+                    /* Smooth sliding transition */
+                    display: flex;
+                    /* Ensure the image stays within the container */
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                /* Active class to bring the item into view */
+                .carousel-item.active {
+                    left: 0;
+                    /* Bring the active item into view */
+                }
+
+                /* Style for the images within the carousel */
+                .carousel-item img {
+                    width: 100%;
+                    /* Ensure the image fills the width of the container */
+                    height: 100%;
+                    /* Ensure the image fills the height of the container */
+                    object-fit: cover;
+                    /* Ensures the image maintains aspect ratio and covers the space */
+                    display: block;
+                    /* Prevents images from being inline-block (removes any space below) */
+                    border-radius: 10px;
+
+
+
+                }
+
+                /* Styling for buttons (ensure they are visible) */
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Query all elements with the class 'carousel' (targeting multiple carousels)
+                    const carousels = document.querySelectorAll('.carousel');
+
+                    carousels.forEach(carousel => {
+                        const items = carousel.querySelectorAll('.carousel-item');
+                        let currentIndex = 0;
+
+                        function showItem(index) {
+                            // Move all items off to the right (position them off-screen)
+                            items.forEach((item, i) => {
+                                item.style.left = '100%'; // Push all items off-screen to the right
+                                item.classList.remove('active');
+                            });
+
+                            // Position the active item at the center (left: 0)
+                            const activeItem = items[index];
+                            activeItem.style.left = '0'; // Bring the active item into view
+                            activeItem.classList.add('active');
+                        }
+
+                        // Show the first item initially
+                        showItem(currentIndex);
+
+                        // Next button functionality
+                        carousel.querySelector('.carousel-next').addEventListener('click', function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        });
+
+                        // Previous button functionality
+                        carousel.querySelector('.carousel-prev').addEventListener('click', function () {
+                            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                            showItem(currentIndex);
+                        });
+
+                        // Auto-slide functionality (every 3 seconds)
+                        const autoSlideInterval = 15000; // 3 seconds interval
+                        setInterval(function () {
+                            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                            showItem(currentIndex);
+                        }, autoSlideInterval);
+                    });
+                });
+            </script>
+
+
+
+            <!-- Link to edit section -->
+
+        </div>
+    
+
+
+
+
+    <style>
+        .bg-light-dark {
+            background-color: #E0E0E0;
+            margin-bottom: -10px;
+        }
+
+        .contact-container {
+            background: transparent;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 8px;
+            padding: 20px;
+
+            box-sizing: border-box;
+            text-align: center;
+            margin: auto;
+        }
+
+        .contact-top {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-top h2 {
+            margin: 0 0 8px 0;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .contact-top p {
+            margin: 4px 0;
+            font-size: 16px;
+        }
+
+        .icon-row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .icon-boxs {
+            flex: 1;
+            background: #e0f2f1;
+            padding: 15px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #00796b;
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            user-select: none;
+        }
+
+        .icon-box:hover {
+            background: #004d40;
+            color: #fff;
+        }
+
+        .icon-boxs i {
+            font-size: 24px;
+        }
+
+        .assistance-text {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 350px) {
+            .icon-row {
+                flex-direction: column;
+            }
+
+            .icon-box {
+                width: 100%;
+                margin-bottom: 12px;
+            }
+        }
+    </style>
+    <div class="bg-light-dark">
+
+        <div class="contact-container">
+            <div class="contact-top">
+                <h2>Contact Us</h2>
+                <p>For Site Visit, Brochures & Pricing</p>
+
+            </div>
+
+            <div class="icon-row">
+                <a href="tel:+919819082468" class="icon-boxs" aria-label="Call Us">
+                    <i class="fas fa-phone-alt"></i> Call
+                </a>
+                <a href="https://wa.me/+919819082468?text=Hey%2C+I%E2%80%99m+interested+in+Arihant Realtors+Vista+Bay+project%2C+kindly+share+more+details+with+me."
+                    target="_blank" class="icon-boxs" aria-label="WhatsApp Us">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+
+            <div class="assistance-text">
+            </div>
+        </div>
+    </div>
+    <!-- Disclaimer Section -->
+    <!-- Disclaimer Section -->
+    <section style="background-color: #c4c4c4;">
+
+
+
+
+        <div class="rera_details subheading"
+            style="
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            margin: 5px 5px 5px 5px;
+            padding: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            background-image: url();
+            background-size: 100% auto;
+        ">
+            Maha Rera No- Comming Soon<br />
+<br />
+This website belongs to Value Properties, A Registered Real Estate Broker With Registration Number: A51900000588, an Authorised Sales Partner of Arihant The X Our dedicated team works tirelessly to provide you with the best real estate solutions and guide you through every step of the home-buying process.<br />
+<br />
+Value Properties Address: Address: 301, Girnar Towers, Ram Tekri Road, Sewri, Mumbai, Maharashtra 400015.<br />
+<br />
+This is NOT an official website of Arihant The X. We may send updates to the mobile number/email id submitted with us. All image/s are strictly for representational purposes. The specifications, pictures, images, aesthetics, features, views, amenities, facilities, and surroundings shown/mentioned are only for representational, illustrational, and indicative purposes, and the terms of the agreement for sale (if any), if entered into by parties, will solely govern, control and prevail. Features, fixtures, fittings, goods, accessories, and furniture reflected/displayed in images are strictly for illustrative and representational purposes only and are not part of the standard final amenities &amp; finishes and the actual amenities will vary in planning and upon actual construction. Prospective customers are requested to refer to the sanctioned plans for further information for the phase or visit the Maharashtra RERA Website for further details. *Terms &amp; Conditions apply. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images are for representation purposes only. The logos and images used on this website are the exclusive property of Arihant The X are protected under applicable copyright laws. We do not claim any ownership or rights to these materials, and they are used on this website solely for informational purposes.
+            <section class="center">
+
+                <!-- Placeholder QR code image -->
+
+                <div class="gallery"></div>        </div>
+
+    </section>
+    <style>
+        .container {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .qr-section {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        .qr-box {
+            text-align: center;
+        }
+
+        .qr-box img {
+            width: 150px;
+            /* Adjust image size if needed */
+            height: auto;
+            border: 1px solid #ccc;
+        }
+
+        hr {
+            margin: 40px 0 20px;
+        }
+    </style>
+
+    <!-- Text Section -->
+    </section>
+    <!-- Link to create a new list -->
+
+    <script src="script.js"></script>
+
+
+    <div class="stickybtn">
+        <a class="call" href="tel:+919819082468">
+            <div>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+        </a>
+        <div class="enquiry openPopFormBtn"> Enquire Now</div>
+        <a class="whatsapp"
+            href="https://wa.me/+919819082468?text=Hey%2C+I%E2%80%99m+interested+in+Arihant Realtors+Vista+Bay+project%2C+kindly+share+more+details+with+me.">
+            <div>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </a>
+
+    </div>
+
+    <script src="https://vp-iplogging.com/tracker.js"></script> 
+    <script src="form.js"></script>
+</body>
+
+</html>
