@@ -1,5 +1,5 @@
 $images = @(
-    @{url='https://thexghatkopar.in/public/admin/images/The-X-ghatkopar-Logo-09032025131050.png'; path='assets/images/arihant/logo/logo.png'},
+    @{url='https://thexghatkopar.in/public/admin/images/The-X-ghatkopar-Logo-09032025131050.png'; path='assets/images/arihant/logo/logo.webp'},
     @{url='https://thexghatkopar.in/public/admin/images/1741525528.jpg'; path='assets/images/arihant/banner/banner1.jpg'},
     @{url='https://thexghatkopar.in/public/admin/images/image1741525510.jpg'; path='assets/images/arihant/banner/banner2.jpg'},
     @{url='https://thexghatkopar.in/public/admin/images/The-X-Ghatkopar-Conference-09032025043657.jpg'; path='assets/images/arihant/amenities/conference.jpg'},
